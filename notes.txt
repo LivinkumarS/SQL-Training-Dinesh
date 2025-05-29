@@ -1,0 +1,77 @@
+Database ---> A database is a structured collection of data. It helps store and manage information efficiently.
+example: stores user data, purchases, favlist..
+
+Table ---> Stores data in rows and columns.
+
+sno  name     dob              password
+1    saala    28/05/2003       **************
+1    saala    28/05/2003       **************
+1    saala    28/05/2003       **************
+1    saala    28/05/2003       **************
+1    saala    28/05/2003       **************
+1    saala    28/05/2003       **************
+
+sno  id       dop              purchase
+1    saala    28/05/2003       **************
+1    saala    28/05/2003       **************
+1    saala    28/05/2003       **************
+1    saala    28/05/2003       **************
+1    saala    28/05/2003       **************
+1    saala    28/05/2003       **************
+
+
+operations we gonna perform with data ---> CRUD--> Create Read Update Delete.
+
+Relational---> Organizes data into tables(ex: mySQL, PostreSQL, Oracle).
+Non-Relational---> Uses Documants (json..) { "name":"username", "dob":"28/05/2003", "password":"password" },{ "name":"username", "dob":"28/05/2003", "password":"password" }. example: mongoDB.
+
+
+MySQL 
+--------
+RDBMS-> Relational  Database Management System.
+Uses SQL--> Structured Query Language.
+
+What Can you Do with it?
+--------------------------
+1) Store data.
+2) Query data.
+3) Update records.
+4) Delete Records
+5) connect to web apps. 
+
+DataTypes
+-----------
+Number
+-------
+INT--->whole numbers
+TINYINT---> 1 byte (2^8).
+BIGINT---> large numbers
+FLOAT---> 1.2334, 3.3443, 0.343343
+
+String
+--------
+VARCHAR(n)---> variable-length string (upto n char).
+CHAR(n)---> fixed length string.
+TEXT--->Large block of text
+
+Date and Time Data Types.
+-----------------------------
+
+DATE---> Date only.
+TIME----> Only time.
+DATETIME---> Full date and time.
+
+
+Boolean
+--------------
+BOOLEAN ---> True/False
+
+Queries
+---------------
+Create Database---> CREATE DATABASE learn_sql;
+To use Database---> USE learn_sql;
+To create Table---> CREATE TABLE sample_users ( columns );
+
+To Retrive Data---> SELECT
+To descibe structures---> DESCRIBE table_name;
+To Insert DATA---> INSERT INTO sample_users (id, name, email) VALUES (3, 'Dinesh','dinesh@gmail.com');
