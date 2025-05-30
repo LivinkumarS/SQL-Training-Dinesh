@@ -73,5 +73,24 @@ To use Database---> USE learn_sql;
 To create Table---> CREATE TABLE sample_users ( columns );
 
 To Retrive Data---> SELECT
+
+*----> to get all the columns.(filtering col).
+to filter rows(data)--> WHERE condition
+
+Pattern Matching ---> LIKE.
+
+'char%'---> starting
+'%char'---> ending
+'%char%'---> contains
+
+Combine two conditions ---> AND, OR
+Limit results---> LIMIT
+
+Range filtering---> BETWEEN
+Ordering(Sorting) Result---> ORDER BY (ASC, DESC)
+
+
+
 To descibe structures---> DESCRIBE table_name;
 To Insert DATA---> INSERT INTO sample_users (id, name, email) VALUES (3, 'Dinesh','dinesh@gmail.com');
+
