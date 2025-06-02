@@ -66,6 +66,16 @@ Boolean
 --------------
 BOOLEAN ---> True/False
 
+Column Constraints
+-------------------
+1)NOT NULL--> Prevents Null values.
+2)AUTO_INCREMENT
+3) primary key
+4) UNIQUE
+5)default
+
+6) Foreign key---> refers to primary key in another table.
+
 Queries
 ---------------
 Create Database---> CREATE DATABASE learn_sql;
@@ -73,6 +83,7 @@ To use Database---> USE learn_sql;
 To create Table---> CREATE TABLE sample_users ( columns );
 
 To Retrive Data---> SELECT
+-------------------------------
 
 *----> to get all the columns.(filtering col).
 to filter rows(data)--> WHERE condition
@@ -90,7 +101,38 @@ Range filtering---> BETWEEN
 Ordering(Sorting) Result---> ORDER BY (ASC, DESC)
 
 
+Updating and Deleting Data
+---------------------------
+Update---> Modifing the existing data.
+
+UPDATE, SET.
+
+example--->UPDATE users SET userName='livinkumar s', email='slivinkumarkrr@gmail.com' where id=4; 
+Danger zone-->UPDATE users SET userName='livinkumar s', email='slivinkumarkrr@gmail.com' (without condition).
+
+
+DELETE, FROM.
+ex:
+DELETE FROM users WHERE id=5;
+
+SET SQL_SAFE_UPDATES=1;
+DELETE FROM users WHERE isActive='inactive';
+
+Danger Zone---> DELETE FROM users (without condition)
+
 
 To descibe structures---> DESCRIBE table_name;
 To Insert DATA---> INSERT INTO sample_users (id, name, email) VALUES (3, 'Dinesh','dinesh@gmail.com');
 
+
+Relation Ships  and Foreign Keys
+----------------------------------
+
+  foreign key (user_id) references users(id)
+
+Types of Joins
+-----------------
+
+1)Inner Join
+2)left Join 
+3)Rights
