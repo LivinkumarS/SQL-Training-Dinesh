@@ -125,6 +125,20 @@ To descibe structures---> DESCRIBE table_name;
 To Insert DATA---> INSERT INTO sample_users (id, name, email) VALUES (3, 'Dinesh','dinesh@gmail.com');
 
 
+Altering and Deleting Table
+----------------------------
+Delete--> DROP TABLE "table's name"
+
+Altering ---> ALTER.
+ALTER TABLE users ADD dummy VARCHAR(100);
+ALTER TABLE users DROP COLUMN dummy;
+ALTER TABLE users RENAME COLUMN dummy TO emptyCol;
+
+
+Renaming a Table ---> 
+RENAME TABLE users TO userData;
+
+
 Relation Ships  and Foreign Keys
 ----------------------------------
 
@@ -135,4 +149,20 @@ Types of Joins
 
 1)Inner Join
 2)left Join 
-3)Rights
+3)Right join
+
+Joins are used to combine two or more related tables based on a common column.
+
+Inner Joins.
+-------------
+Returns only matching rows.
+>>select users.id, users.name, marks.mark from users inner join marks on users.id=marks.userId;
+it ensures we only get mark with valid users.
+
+Left join 
+-------------
+ensures all rows from left table are shown and matches rows from the right.
+
+Right join 
+-------------
+ensures all rows from right table are shown and matches rows from the left.
