@@ -166,3 +166,47 @@ ensures all rows from left table are shown and matches rows from the right.
 Right join 
 -------------
 ensures all rows from right table are shown and matches rows from the left.
+
+
+Aggregations and Grouping
+--------------------------
+These functions Process multiple rows and return single result.
+
+COUNT()
+-------
+select count(*) from employees;---> counts the entries
+
+SUM()
+------
+select sum(hourly_pay) from employees; ---> sum of all  the values
+
+AVG()
+-----
+select avg(hourly_pay) from employees; ---> average value
+
+MIN()
+-----
+select min(hourly_pay) from employees; ---> minimum value
+
+MAX()
+------
+select max(hourly_pay) from employees; ---> maximum
+
+
+Grouping
+------------
+
+group by--> keyword.
+
+groups rows that have the same values in specified row.
+
+select hourly_pay, count(hourly_pay), group_concat(fName) from employees group by hourly_pay;
+
+
+Subqueries and aliases(as)
+----------------------------
+Subqueries---> query that is written inside another query.
+select id, fName, lName, hourly_pay, (select avg(hourly_pay) from employees) from employees;
+
+AS--> name a column when retriving.
+select id, fName, lName, hourly_pay, (select avg(hourly_pay) from employees) as average_pay from employees;
