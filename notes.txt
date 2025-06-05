@@ -210,3 +210,18 @@ select id, fName, lName, hourly_pay, (select avg(hourly_pay) from employees) fro
 
 AS--> name a column when retriving.
 select id, fName, lName, hourly_pay, (select avg(hourly_pay) from employees) as average_pay from employees;
+
+
+
+
+
+
+
+
+
+NPM Notes:
+----------
+npm init---> pacjkage.json
+npm install mysql2
+
+package.json---> "type":"module"
